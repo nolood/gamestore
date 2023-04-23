@@ -1,0 +1,92 @@
+@import "./../../styles/variables";
+
+.navbar {
+  background-color: $plate-background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  backdrop-filter: blur(40px);
+}
+
+.navbar__wrapper {
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  width: 3rem;
+  svg {
+    fill: $icon-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  h1 {
+    margin-right: 1.2rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+}
+
+.navbar__list, .navbar__list-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__list-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.3rem;
+  z-index: 2;
+  &:hover {
+    background-color: $hover-background-color;
+  }
+}
+
+.navbar__wishlist-icon {
+  width: 2rem;
+  padding-top: 4px;
+  svg {
+    g {
+      fill: $icon-color;
+    }
+  }
+}
+
+.navbar__profile-icon {
+  width: 2.2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1.2rem;
+  border-radius: 100%;
+  svg {
+    g {
+      path {
+        stroke: $icon-color;
+      }
+    }
+  }
+}
+
+.navbar__wishlist {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.navbar__logo-wrapper, .navbar__wishlist {
+  width: 25%;
+}
